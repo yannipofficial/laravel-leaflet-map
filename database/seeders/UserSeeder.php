@@ -21,14 +21,14 @@ class UserSeeder extends Seeder
         // admin user
         User::factory()->create([
             'id' => 1,
-            'email' => 'admin@gmail.com',
+            'email' => 'admin@2rot.com',
             'role' => UserRole::Admin->value,
         ]);
 
         // simple user
         User::factory()->create([
             'id' => 2,
-            'email' => 'user@gmail.com'
+            'email' => 'user@2rot.com'
         ]);
 
         // random simple users
