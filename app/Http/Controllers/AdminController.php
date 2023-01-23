@@ -106,7 +106,7 @@ class AdminController extends Controller
                 ->orWhere('email', 'like', '%' . $request['search'] . '%')
                 ->orWhere('created_at', 'like', '%' . $request['search'] . '%')
                 ->orderBy('created_at', 'desc')
-                ->paginate($request['limit'])->orderBy('created_at', 'desc');
+                ->paginate($request['limit']);
         } else {
             $users = User::orderBy('created_at', 'desc')->paginate($request['limit']);
         }
